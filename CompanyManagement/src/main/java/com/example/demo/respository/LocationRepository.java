@@ -17,5 +17,4 @@ public interface LocationRepository extends JpaRepository<Location, Long> {
     List<Location> findByLocationEndingWith(String string);
 
     List<Location> findByLocationContaining(String string);
-
 }

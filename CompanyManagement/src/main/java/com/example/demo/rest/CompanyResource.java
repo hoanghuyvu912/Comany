@@ -140,7 +140,7 @@ public class CompanyResource implements CompanyAPI {
     }
 
     @Override
-    public ResponseEntity<List<Relatives>> getRelativesByPhoneNumberWith(String string) {
+    public ResponseEntity<List<Relatives>> getRelativesByPhoneNumberContaining(String string) {
         return ResponseEntity.ok(relativesService.getRelativesByPhoneNumberContaining(string));
     }
 

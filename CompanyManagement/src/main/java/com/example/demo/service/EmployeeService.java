@@ -36,6 +36,16 @@ public class EmployeeService {
         return employeeRepository.findByLastNameAndFirstName(lastName, firstName);
     }
 
+//    public List<Employee> getEmployeeByLastNameAndFirstNameInDepartment(String lastName, String firstName, Long deptId) {
+//        Optional<Department> department = departmentRepository.findById(deptId);
+//        Optional<Employee> optionalEmployee = null;
+//        if (department.isPresent()) {
+//            optionalEmployee = employeeRepository.findById(employeeId);
+//        }
+//        employeeRepository.
+//        return employeeRepository.findByLastNameAndFirstName(lastName, firstName);
+//    }
+
     public List<Employee> getEmployeeByLastNameOrFirstName(String lastName, String firstName) {
         return employeeRepository.findByLastNameOrFirstName(lastName, firstName);
     }

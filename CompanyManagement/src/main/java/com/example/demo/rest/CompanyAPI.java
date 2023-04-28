@@ -25,7 +25,6 @@ public interface CompanyAPI {
     @GetMapping(value = "/employees/firstName")
     ResponseEntity<List<Employee>> getEmployeeByFirstName(@RequestParam("firstName") String firstName);
 
-
     @GetMapping(value = "/employees/salaryLessThan")
     ResponseEntity<List<Employee>> getEmployeeBySalaryLessThan(@RequestParam("salary") Integer salary);
 
@@ -82,16 +81,16 @@ public interface CompanyAPI {
     @GetMapping(value = "/relatives_order_by_full_name")
     ResponseEntity<List<Relatives>> getAllRelativesOrderByFullName();
 
-    @GetMapping(value = "/relatives/start_with/{string}")
+    @GetMapping(value = "/relatives/start_with")
     ResponseEntity<List<Relatives>> getRelativesByFullNameStartingWith(@RequestParam String string);
 
-    @GetMapping(value = "/relatives/ending_with/{string}")
+    @GetMapping(value = "/relatives/ending_with")
     ResponseEntity<List<Relatives>> getRelativesByFullNameEndingWith(@RequestParam String string);
 
-    @GetMapping(value = "/relatives/containing/{string}")
-    ResponseEntity<List<Relatives>> getRelativesByPhoneNumberWith(@RequestParam String string);
+    @GetMapping(value = "/relatives/phone_number_containing")
+    ResponseEntity<List<Relatives>> getRelativesByPhoneNumberContaining(@RequestParam String string);
 
-    @GetMapping(value = "/relatives/relationship/{string}")
+    @GetMapping(value = "/relatives/relationship")
     ResponseEntity<List<Relatives>> getRelativesByRelationshipEquals(@RequestParam String string);
 
     //Assignment

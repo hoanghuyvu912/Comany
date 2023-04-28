@@ -23,7 +23,6 @@ public class EmployeeResource implements EmployeeAPI {
     }
 
 
-
     @Override
     public ResponseEntity<Employee> createEmployee(EmployeeDTO employeeDTO, Long deptId) {
         Employee employee = employeeService.createEmployee(employeeDTO, deptId);
